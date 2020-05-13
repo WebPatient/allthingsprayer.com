@@ -96,76 +96,152 @@ else {
     }
 
     function CheckProgress(){
-      console.log(document.questionnaire.ONE.value);
-      if ((document.questionnaire.ONE.value == "")){
+// Q1
+      if ((document.questionnaire.ONE[0].checked == false) && 
+          (document.questionnaire.ONE[1].checked == false) &&
+          (document.questionnaire.ONE[2].checked == false) &&
+          (document.questionnaire.ONE[3].checked == false)){
         q1 = 0;
       }
-      else {
+      else if ((document.questionnaire.ONE[0].checked == true) || 
+          (document.questionnaire.ONE[1].checked == true) ||
+          (document.questionnaire.ONE[2].checked == true) ||
+          (document.questionnaire.ONE[3].checked == true)){      
         q1 = 1;
       }
 
-      if ((document.questionnaire.TWO.value == "")){
+// Q2
+      if ((document.questionnaire.TWO[0].checked == false) && 
+          (document.questionnaire.TWO[1].checked == false) &&
+          (document.questionnaire.TWO[2].checked == false) &&
+          (document.questionnaire.TWO[3].checked == false)){
         q2 = 0;
       }
-      else {
+      else if ((document.questionnaire.TWO[0].checked == true) && 
+          (document.questionnaire.TWO[1].checked == true) &&
+          (document.questionnaire.TWO[2].checked == true) &&
+          (document.questionnaire.TWO[3].checked == true)){
         q2 = 1;
       }
 
-      if ((document.questionnaire.THREE.value == "")){
+// Q3
+      if ((document.questionnaire.THREE[0].checked == false) && 
+          (document.questionnaire.THREE[1].checked == false) &&
+          (document.questionnaire.THREE[2].checked == false) &&
+          (document.questionnaire.THREE[3].checked == false)){
         q3 = 0;
       }
-      else {
+      else if ((document.questionnaire.THREE[0].checked == true) || 
+          (document.questionnaire.THREE[1].checked == true) ||
+          (document.questionnaire.THREE[2].checked == true) ||
+          (document.questionnaire.THREE[3].checked == true)){
         q3 = 1;
       }
 
-      if ((document.questionnaire.FOUR.value == "")){
+// Q4
+      if ((document.questionnaire.FOUR[0].checked == false) && 
+          (document.questionnaire.FOUR[1].checked == false) &&
+          (document.questionnaire.FOUR[2].checked == false) &&
+          (document.questionnaire.FOUR[3].checked == false)){
         q4 = 0;
       }
-      else {
+      else if ((document.questionnaire.FOUR[0].checked == true) || 
+          (document.questionnaire.FOUR[1].checked == true) ||
+          (document.questionnaire.FOUR[2].checked == true) ||
+          (document.questionnaire.FOUR[3].checked == true)){
         q4 = 1;
       }
 
-
-      if ((document.questionnaire.FIVE.value == "")){
+// Q5
+      if ((document.questionnaire.FIVE[0].checked == false) && 
+          (document.questionnaire.FIVE[1].checked == false) &&
+          (document.questionnaire.FIVE[2].checked == false) &&
+          (document.questionnaire.FIVE[3].checked == false)){
         q5 = 0;
       }
-      else {
+      else if ((document.questionnaire.FIVE[0].checked == true) || 
+          (document.questionnaire.FIVE[1].checked == true) ||
+          (document.questionnaire.FIVE[2].checked == true) ||
+          (document.questionnaire.FIVE[3].checked == true)){
         q5 = 1;
       }
 
-      if ((document.questionnaire.SIX.value == "")){
+// Q6
+      if ((document.questionnaire.SIX[0].checked == false) && 
+          (document.questionnaire.SIX[1].checked == false) &&
+          (document.questionnaire.SIX[2].checked == false) &&
+          (document.questionnaire.SIX[3].checked == false)){
         q6 = 0;
       }
-      else {
+      else if ((document.questionnaire.SIX[0].checked == true) || 
+          (document.questionnaire.SIX[1].checked == true) ||
+          (document.questionnaire.SIX[2].checked == true) ||
+          (document.questionnaire.SIX[3].checked == true)){
         q6 = 1;
       }
 
-
-      if ((document.questionnaire.SEVEN.value == "")){
+// Q7
+      if ((document.questionnaire.SEVEN[0].checked == false) && 
+          (document.questionnaire.SEVEN[1].checked == false) &&
+          (document.questionnaire.SEVEN[2].checked == false) &&
+          (document.questionnaire.SEVEN[3].checked == false)){
         q7 = 0;
       }
-      else {
+      else if ((document.questionnaire.SEVEN[0].checked == true) || 
+          (document.questionnaire.SEVEN[1].checked == true) ||
+          (document.questionnaire.SEVEN[2].checked == true) ||
+          (document.questionnaire.SEVEN[3].checked == true)){
         q7 = 1;
       }
 
-      if ((document.questionnaire.EIGHT.value == "")){
+// Q8
+      if ((document.questionnaire.EIGHT[0].checked == false) && 
+          (document.questionnaire.EIGHT[1].checked == false) &&
+          (document.questionnaire.EIGHT[2].checked == false) &&
+          (document.questionnaire.EIGHT[3].checked == false) &&
+          (document.questionnaire.EIGHT[4].checked == false)){
         q8 = 0;
       }
-      else {
+      else if ((document.questionnaire.EIGHT[0].checked == true) || 
+          (document.questionnaire.EIGHT[1].checked == true) ||
+          (document.questionnaire.EIGHT[2].checked == true) ||
+          (document.questionnaire.EIGHT[3].checked == true) ||
+          (document.questionnaire.EIGHT[4].checked == true)){
         q8 = 1;
       }
 
-      if ((document.questionnaire.NINE.value == "")){
+// Q9
+      if ((document.questionnaire.NINE[0].checked == false) && 
+          (document.questionnaire.NINE[1].checked == false) &&
+          (document.questionnaire.NINE[2].checked == false) &&
+          (document.questionnaire.NINE[3].checked == false) &&
+          (document.questionnaire.NINE[4].checked == false) &&
+          (document.questionnaire.NINE[5].checked == false) &&
+          (document.questionnaire.NINE[6].checked == false)){
         q9 = 0;
       }
-      else {
+      else if ((document.questionnaire.NINE[0].checked == true) || 
+          (document.questionnaire.NINE[1].checked == true) ||
+          (document.questionnaire.NINE[2].checked == true) ||
+          (document.questionnaire.NINE[3].checked == true) ||
+          (document.questionnaire.NINE[4].checked == true) ||
+          (document.questionnaire.NINE[5].checked == true) ||
+          (document.questionnaire.NINE[6].checked == true)){
         q9 = 1;
       }
 
-      if ((document.questionnaire.TEN.value == "")){
+      if ((document.questionnaire.TEN[0].checked == false) && 
+          (document.questionnaire.TEN[1].checked == false) &&
+          (document.questionnaire.TEN[2].checked == false) &&
+          (document.questionnaire.TEN[3].checked == false) &&
+          (document.questionnaire.TEN[4].checked == false)){
         q10 = 0;
       }
-      else {
+      else if ((document.questionnaire.TEN[0].checked == true) || 
+          (document.questionnaire.TEN[1].checked == true) ||
+          (document.questionnaire.TEN[2].checked == true) ||
+          (document.questionnaire.TEN[3].checked == true) ||
+          (document.questionnaire.TEN[4].checked == true)){
         q10 = 1;
       }
 
