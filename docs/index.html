@@ -95,6 +95,10 @@ else {
 		    return false;
     }
 
+    function Validation2(){
+        return false;
+    }
+
     function CheckProgress(){
 // Q1
       if ((document.questionnaire.ONE[0].checked == false) && 
@@ -396,11 +400,15 @@ document.write('<div id="invite"></div>');
 
 document.write('<p><br><sub>&copy; 2020 allthingsprayer.com</sub></p>');
 document.write('<div id="contact"></div>');
-document.getElementById('contact').innerHTML = '<p><br>Contact us';
+// document.getElementById('contact').innerHTML = '<p><br>Contact us';
+document.write('<p><br>Contact us');
+document.write('</form>');
+document.write('<form name="contact" method="POST" onsubmit="return Validation2()">');
 document.write('<p>Full name:<input type="text" size="27" name="Realname">');
 document.write('<p>Email:<input type="text" size="28" name="Email">');
 document.write('<p>Subject:<input type="text" size="28" name="Subject">');
 document.write('<p>Message:<br><textarea rows="8" name="Message" cols="80"></textarea>');
+document.write('<p><input type="submit" value="Contact us" name="send"></blockquote>');
 document.write('</form>');
 document.write('<a href="#home">Back</a>');
 document.write('</blockquote>');
