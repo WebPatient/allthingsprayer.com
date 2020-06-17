@@ -53,11 +53,26 @@
           return false;
         } 
 
+        if(document.contact.Topic.value == "no selected"){
+          document.contact.Topic.focus();
+          document.getElementById('status').innerHTML = 'Please select a subject.';
+          return false;
+        }
+
+
+        if(document.contact.Message.value == ""){
+          document.contact.Message.focus();
+          document.getElementById('status').innerHTML = 'Please type your message.';
+          return false;
+        }
 
 
         document.getElementById('status').innerHTML = 'Name: ' + document.contact.Realname.value +
-         '<br>Email: ' + document.contact.Email.value;        
-		    return false;
+         '<br>Email: ' + document.contact.Email.value +
+         '<br>Topic: ' + document.contact.Topic.value +
+         '<br>Message: ' + document.contact.Message.value +
+         '<br>Sending message to: contact@allthingsprayer.com';        
+		    return true;
     }
 
     </script>
@@ -91,15 +106,21 @@
  </center> 
 
 	<font size="4">
-	  <form name="contact" method="POST" action="/cgi-bin/form-mail.cgi" onsubmit="return Validation()">
+    <form name="contact" method="POST" action="/cgi-bin/form-mail.cgi" onsubmit="return Validation()">
 	    <script type="text/javascript">
 document.write('<blockquote>');
 document.write('<p><br><center><b>Contact us</b></center>');
-document.write('<input type="hidden" name="recipient" value="contact@allthingsprayer.com"><input type="hidden" name="subject" value="Contact requested"><input type="hidden" name="redirect" value="../sent.html"><input type="hidden" name="required" value="realname,email,subject2,message"><input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT">');
+document.write('<input type="hidden" name="recipient" value="contact@allthingsprayer.com"><input type="hidden" name="subject" value="Contact requested"><input type="hidden" name="redirect" value="./sent.html"><input type="hidden" name="required" value="Realname,Email,Topic,Message"><input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT">');
 
 document.write('<p>Full name:<input type="text" size="27" name="Realname">');
 document.write('<p>Email:<input type="text" size="28" name="Email">');
-document.write('<p>Subject:<input type="text" size="28" name="Subject2">');
+document.write('<p>Topic:<select name="Topic">');
+document.write('<option value="no selected" selected>Select your topic</option>');
+document.write('<option value="Share Your Story">Share Your Story</option>');
+document.write('<option value="Inquiries">Inquiries</option>');
+document.write('<option value="Resources">Resources</option>');
+
+document.write('</select>');
 document.write('<p>Message:<br><textarea rows="8" name="Message" cols="80"></textarea>');
 document.write('<p><input type="submit" value="Contact us" name="send">');
 document.write('<div id="status"></div>');
