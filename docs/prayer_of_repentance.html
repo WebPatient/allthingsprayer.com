@@ -38,40 +38,7 @@ blockquote {
   window.location.replace("http://www.webpatient.net/android/")
   }
 
-  </script>
-    <script language="JavaScript">
-    function EmailValidation(src) {
-        var regex =/^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+\.)+[a-zA-Z0-9.-]{2,4}$/;
-        return regex.test(src);
-      }
-    
-    function Validation(){
-        if(document.contact.Realname.value == ""){
-          document.contact.Realname.focus();
-          document.getElementById('status').innerHTML = 'Please type your name.';
-          return false;
-        }
-
-        if(document.contact.Email.value == "" || document.contact.Email.value == " "){
-          document.contact.Email.focus();
-          document.getElementById('status').innerHTML = 'Please type your email.';
-          return false;
-        }
-
-        if(EmailValidation(document.contact.Email.value) == false) {
-          document.contact.Email.select();
-          document.getElementById('status').innerHTML = '"' + document.contact.Email.value + '" is an invalid email.  Please type your email.';
-          return false;
-        } 
-
-
-
-        document.getElementById('status').innerHTML = 'Name: ' + document.contact.Realname.value +
-         '<br>Email: ' + document.contact.Email.value;        
-		    return false;
-    }
-
-    </script>
+  </script>  
         <script language="javascript"><!--  
       var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
               if (mobile) {
