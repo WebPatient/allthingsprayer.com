@@ -121,7 +121,18 @@ document.write('<option value="Inquiries">Inquiries</option>');
 document.write('<option value="Resources">Resources</option>');
 
 document.write('</select>');
-document.write('<p>Message:<br><textarea rows="8" name="Message" cols="80"></textarea>');
+
+var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+if (mobile) {
+  document.write('<p>Message:<br><textarea rows="8" name="Message" cols="35"></textarea>');
+} 
+else {
+  document.write('<p>Message:<br><textarea rows="8" name="Message" cols="80"></textarea>');
+}
+
+
+
+
 document.write('<p><input type="submit" value="Contact us" name="send">');
 document.write('<div id="status"></div>');
 document.write('<p><br><br><sub>&copy; 2020 allthingsprayer.com</sub></p></blockquote>');
