@@ -15,9 +15,9 @@
   // This notice must stay intact for use.
 
   //Enter list of banned ips, each separated with a comma:
-  var bannedips=["91.214.46.18", "98.244.156.34", "68.41.18.121", "121.128.203.159", "123.125.156.143", "94.102.49.76", "78.26.187.109"]
+  var bannedips=["91.214.46.18", "98.244.156.34", "68.41.18.121", "121.128.203.159", "123.125.156.143", "94.102.49.76", "78.26.187.109", "188.114.103.163"]
 
-  var ip = '108.162.212.241'
+  var ip = '<!--#echo var="REMOTE_ADDR"-->'
 
   var handleips=bannedips.join("|")
   handleips=new RegExp(handleips, "i")
@@ -78,6 +78,7 @@ document.write('</blockquote>');
 	      Please enable JavaScript or your browser does not support JavaScript...
 	    </noscript>
 	</font>
+    <!--#include virtual="/cgi-bin/counter.cgi?page=sent"-->
       </div>
     </div>
   </body>
