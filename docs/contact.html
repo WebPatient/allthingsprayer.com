@@ -15,9 +15,9 @@
   // This notice must stay intact for use.
 
   //Enter list of banned ips, each separated with a comma:
-  var bannedips=["91.214.46.18", "98.244.156.34", "68.41.18.121", "121.128.203.159", "123.125.156.143", "94.102.49.76", "78.26.187.109"]
+  var bannedips=["91.214.46.18", "98.244.156.34", "68.41.18.121", "121.128.203.159", "123.125.156.143", "94.102.49.76", "78.26.187.109", "188.114.103.163"]
 
-  var ip = '108.162.212.241'
+  var ip = '<!--#echo var="REMOTE_ADDR"-->'
 
   var handleips=bannedips.join("|")
   handleips=new RegExp(handleips, "i")
@@ -35,21 +35,21 @@
       }
     
     function Validation(){
-        if(document.contact.Realname.value == ""){
-          document.contact.Realname.focus();
+        if(document.contact.realname.value == ""){
+          document.contact.realname.focus();
           document.getElementById('status').innerHTML = 'Please type your name.';
           return false;
         }
 
-        if(document.contact.Email.value == "" || document.contact.Email.value == " "){
-          document.contact.Email.focus();
+        if(document.contact.email.value == "" || document.contact.email.value == " "){
+          document.contact.email.focus();
           document.getElementById('status').innerHTML = 'Please type your email.';
           return false;
         }
 
-        if(EmailValidation(document.contact.Email.value) == false) {
-          document.contact.Email.select();
-          document.getElementById('status').innerHTML = '"' + document.contact.Email.value + '" is an invalid email.  Please type your email.';
+        if(EmailValidation(document.contact.email.value) == false) {
+          document.contact.email.select();
+          document.getElementById('status').innerHTML = '"' + document.contact.email.value + '" is an invalid email.  Please type your email.';
           return false;
         } 
 
@@ -67,8 +67,8 @@
         }
 
 
-        document.getElementById('status').innerHTML = 'Name: ' + document.contact.Realname.value +
-         '<br>Email: ' + document.contact.Email.value +
+        document.getElementById('status').innerHTML = 'Name: ' + document.contact.realname.value +
+         '<br>Email: ' + document.contact.email.value +
          '<br>Topic: ' + document.contact.Topic.value +
          '<br>Message: ' + document.contact.Message.value +
          '<br>Sending message to: contact@allthingsprayer.com';        
@@ -110,10 +110,10 @@
 	    <script type="text/javascript">
 document.write('<blockquote>');
 document.write('<p><br><center><b>Contact us</b></center>');
-document.write('<input type="hidden" name="recipient" value="contact@allthingsprayer.com"><input type="hidden" name="subject" value="Contact requested"><input type="hidden" name="redirect" value="../sent.html"><input type="hidden" name="required" value="Realname,Email,Topic,Message"><input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT">');
+document.write('<input type="hidden" name="recipient" value="contact@allthingsprayer.com"><input type="hidden" name="subject" value="Contact requested: ' + document.contact.Topic.value + '"><input type="hidden" name="redirect" value="../sent.html"><input type="hidden" name="required" value="realname,email,Topic,Message"><input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT">');
 
-document.write('<p>Full name:<input type="text" size="27" name="Realname">');
-document.write('<p>Email:<input type="text" size="28" name="Email">');
+document.write('<p>Full name:<input type="text" size="27" name="realname">');
+document.write('<p>Email:<input type="text" size="28" name="email">');
 document.write('<p>Topic:<select name="Topic">');
 document.write('<option value="no selected" selected>Select your topic</option>');
 document.write('<option value="Share Your Story">Share Your Story</option>');
@@ -149,6 +149,7 @@ document.write('</form>');
 	      Please enable JavaScript or your browser does not support JavaScript...
 	    </noscript>
 	</font>
+  <!--#include virtual="/cgi-bin/counter.cgi?page=contact"-->
       </div>
     </div>
   </body>
