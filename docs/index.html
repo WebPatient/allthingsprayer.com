@@ -15,9 +15,9 @@
   // This notice must stay intact for use.
 
   //Enter list of banned ips, each separated with a comma:
-  var bannedips=["91.214.46.18", "98.244.156.34", "68.41.18.121", "121.128.203.159", "123.125.156.143", "94.102.49.76", "78.26.187.109"]
+  var bannedips=["91.214.46.18", "98.244.156.34", "68.41.18.121", "121.128.203.159", "123.125.156.143", "94.102.49.76", "78.26.187.109", "188.114.103.163"]
 
-  var ip = '108.162.212.241'
+  var ip = '<!--#echo var="REMOTE_ADDR"-->'
 
   var handleips=bannedips.join("|")
   handleips=new RegExp(handleips, "i")
@@ -302,7 +302,7 @@ else {
 	  <form name="questionnaire" method="POST" onsubmit="return Validation()">
 	    <script type="text/javascript">
 document.write('<blockquote>');
-document.write('<p><br><center><b>Self-Reflection Tool</b></center><p>The purpose of these questions is to help readers identify our personal biases in perceiving our own race & others. We hope this exercise helps our awareness & ability to respond better if confronted with harassment as an Asian American.<p>Please select the answer that reflects your true feelings & how you would react. This is not an academic test. No answers are better than any others. Try to receive each question as a mirror of your true feelings. There are two sections: The first section presents racial bias questions; the next section attempts to help us think through our Asian identity.');
+document.write('<p><br><center><b>Self-Reflection Tool</b></center><p>The purpose of these questions is to help readers identify our personal biases in perceiving our own race & others. We hope this exercise helps our awareness & ability to respond better if confronted with harassment as an Asian American.<p>Please select the answer that reflects your true feelings & how you would react. This is not an academic test. Try to receive each question as a mirror of your true feelings. There are two sections: The first section presents racial bias questions; the next section attempts to help us think through our Asian identity.');
 document.write('<p><br>You can download the Self-Reflection Tool in PDF <a href="self_reflection_tool.pdf" target="_blank">here</a>');
 
 //  Racial Bias Questions.
@@ -405,6 +405,7 @@ document.write('</blockquote>');
 	    </noscript>
 	  <!-- </form> -->
 	</font>
+    <!--#include virtual="/cgi-bin/counter.cgi?page=reflectiontool"-->
       </div>
     </div>
   </body>
