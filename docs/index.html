@@ -29,7 +29,7 @@
 
   </script>
     <script language="JavaScript">
-      var q1 = 0, q2 = 0, q3 = 0, q4 = 0, q5 = 0, q6 = 0, q7 = 0, q8 = 0, q9 = 0, q10 = 0;
+      var q1 = 0, q2 = 0, q3 = 0, q4 = 0, q5 = 0, q6 = 0, q7 = 0, q8 = 0, q9 = 0;
       var thanks = '<p>Thank you for going through this exercise. As stated in the intro, there are no "right" or "wrong" answers. We simply wanted to create a space where you think about your identity and responses to persons of different ethnicities.<p><br>We encourage you to dialogue with others who take this Self-Reflection Tool/Discussion Group Tips. In case you would like to print out a copy to give to those around you, <a href=\"self_reflection_tool.pdf\" target=\"_blank\">here are the pdfs.</a><p><br>In the end, all of us possess hidden (and not so hidden) biases. The Lord sees and forgives all, and there is a spiritual power in repentance in drawing us closer to the Lord and those around us. We invite you pray this <a href="prayer_of_repentance.pdf" target="_blank">repentance prayer</a> out loud.';
       var download = "<p><br><center><b>Discussion Group Tips</center></b>\
       <p>We encourage those who take the Self-Reflection Tool to create a safe, open space for community members to discuss and process their findings of the Self-Reflection Tool.\
@@ -42,50 +42,33 @@
 
 
     	function showInvitation(){
-	/*	if ((document.questionnaire.ONE.value == "D") && (document.questionnaire.TWO.value == "D") && (document.questionnaire.THREE.value == "D") && (document.questionnaire.FOUR.value == "D") && (document.questionnaire.FIVE.value == "D") && (document.questionnaire.SIX.value == "D"))
-		{
-			document.getElementById('invite').innerHTML = '<p><br>You answered “D” in all the Racial Bias Questions<br>We would like to invite you to join the Gideon Dialogue Group at your church.<p>' + download;
-		}
-
-
-
-		else if ((document.questionnaire.ONE.value == "D") || (document.questionnaire.TWO.value == "D") || (document.questionnaire.THREE.value == "D") || (document.questionnaire.FOUR.value == "D") || (document.questionnaire.FIVE.value == "D") || (document.questionnaire.SIX.value == "D"))
-		{
-			document.getElementById('invite').innerHTML = '<p><br>You did not answered “D” in all the Racial Bias Questions<br>We would like to invite you to join the Gideon Dialogue Group at your church.' + download;
-		}
-
-		else {
-			document.getElementById('invite').innerHTML = '<p><br>You did not answered “D” in any the Racial Bias Questions<br>We would like to invite you to join the Gideon Dialogue Group at your church.' + download;
-		}
-		*/
-
     document.getElementById('invite').innerHTML = thanks + download;
 	
-    if(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10 != 10){
-            document.getElementById('progressbarTop').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress><br>Please complete all questions...';
+    if(q1+q2+q3+q4+q5+q6+q7+q8+q9 != 9){
+            document.getElementById('progressbarTop').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress><br>Please complete all questions...';
 
-      document.getElementById('progressbarMiddle').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress><br>Please complete all questions...';
+      document.getElementById('progressbarMiddle').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress><br>Please complete all questions...';
 
-      document.getElementById('progressbar').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress><br>Please complete all questions...';
+      document.getElementById('progressbar').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress><br>Please complete all questions...';
 
     }
 
-    else if (q1+q2+q3+q4+q5+q6+q7+q8+q9+q10 == 10){
-      document.getElementById('progressbarTop').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress><br>All questions answered!';
+    else if (q1+q2+q3+q4+q5+q6+q7+q8+q9 == 9){
+      document.getElementById('progressbarTop').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress><br>All questions answered!';
 
-      document.getElementById('progressbarMiddle').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress><br>All questions answered!';
+      document.getElementById('progressbarMiddle').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress><br>All questions answered!';
 
-      document.getElementById('progressbar').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress><br>All questions answered!';
+      document.getElementById('progressbar').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress><br>All questions answered!';
 
     }
 
 else {
 
-          document.getElementById('progressbarTop').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress>';
+          document.getElementById('progressbarTop').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress>';
 
-      document.getElementById('progressbarMiddle').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress>';
+      document.getElementById('progressbarMiddle').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress>';
 
-      document.getElementById('progressbar').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress>';
+      document.getElementById('progressbar').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress>';
 }
 
     	}
@@ -184,13 +167,15 @@ else {
       if ((document.questionnaire.SEVEN[0].checked == false) && 
           (document.questionnaire.SEVEN[1].checked == false) &&
           (document.questionnaire.SEVEN[2].checked == false) &&
-          (document.questionnaire.SEVEN[3].checked == false)){
+          (document.questionnaire.SEVEN[3].checked == false) &&
+          (document.questionnaire.SEVEN[4].checked == false)){
         q7 = 0;
       }
       else if ((document.questionnaire.SEVEN[0].checked == true) || 
           (document.questionnaire.SEVEN[1].checked == true) ||
           (document.questionnaire.SEVEN[2].checked == true) ||
-          (document.questionnaire.SEVEN[3].checked == true)){
+          (document.questionnaire.SEVEN[3].checked == true) ||
+          (document.questionnaire.SEVEN[4].checked == true)){
         q7 = 1;
       }
 
@@ -199,14 +184,18 @@ else {
           (document.questionnaire.EIGHT[1].checked == false) &&
           (document.questionnaire.EIGHT[2].checked == false) &&
           (document.questionnaire.EIGHT[3].checked == false) &&
-          (document.questionnaire.EIGHT[4].checked == false)){
+          (document.questionnaire.EIGHT[4].checked == false) &&
+          (document.questionnaire.EIGHT[5].checked == false) &&
+          (document.questionnaire.EIGHT[6].checked == false)){
         q8 = 0;
       }
       else if ((document.questionnaire.EIGHT[0].checked == true) || 
           (document.questionnaire.EIGHT[1].checked == true) ||
           (document.questionnaire.EIGHT[2].checked == true) ||
           (document.questionnaire.EIGHT[3].checked == true) ||
-          (document.questionnaire.EIGHT[4].checked == true)){
+          (document.questionnaire.EIGHT[4].checked == true) ||
+          (document.questionnaire.EIGHT[5].checked == true) ||
+          (document.questionnaire.EIGHT[6].checked == true)){
         q8 = 1;
       }
 
@@ -215,53 +204,33 @@ else {
           (document.questionnaire.NINE[1].checked == false) &&
           (document.questionnaire.NINE[2].checked == false) &&
           (document.questionnaire.NINE[3].checked == false) &&
-          (document.questionnaire.NINE[4].checked == false) &&
-          (document.questionnaire.NINE[5].checked == false) &&
-          (document.questionnaire.NINE[6].checked == false)){
+          (document.questionnaire.NINE[4].checked == false)){
         q9 = 0;
       }
       else if ((document.questionnaire.NINE[0].checked == true) || 
           (document.questionnaire.NINE[1].checked == true) ||
           (document.questionnaire.NINE[2].checked == true) ||
           (document.questionnaire.NINE[3].checked == true) ||
-          (document.questionnaire.NINE[4].checked == true) ||
-          (document.questionnaire.NINE[5].checked == true) ||
-          (document.questionnaire.NINE[6].checked == true)){
+          (document.questionnaire.NINE[4].checked == true)){
         q9 = 1;
       }
 
-      if ((document.questionnaire.TEN[0].checked == false) && 
-          (document.questionnaire.TEN[1].checked == false) &&
-          (document.questionnaire.TEN[2].checked == false) &&
-          (document.questionnaire.TEN[3].checked == false) &&
-          (document.questionnaire.TEN[4].checked == false)){
-        q10 = 0;
-      }
-      else if ((document.questionnaire.TEN[0].checked == true) || 
-          (document.questionnaire.TEN[1].checked == true) ||
-          (document.questionnaire.TEN[2].checked == true) ||
-          (document.questionnaire.TEN[3].checked == true) ||
-          (document.questionnaire.TEN[4].checked == true)){
-        q10 = 1;
-      }
+    if (q1+q2+q3+q4+q5+q6+q7+q8+q9 == 9){
+      document.getElementById('progressbarTop').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress><br>All questions answered, please click \'Evaluate\'';
 
+      document.getElementById('progressbarMiddle').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress><br>All questions answered, please click \'Evaluate\'';
 
-    if (q1+q2+q3+q4+q5+q6+q7+q8+q9+q10 == 10){
-      document.getElementById('progressbarTop').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress><br>All questions answered, please click \'Evaluate\'';
-
-      document.getElementById('progressbarMiddle').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress><br>All questions answered, please click \'Evaluate\'';
-
-      document.getElementById('progressbar').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress><br>All questions answered, please click \'Evaluate\'';
+      document.getElementById('progressbar').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress><br>All questions answered, please click \'Evaluate\'';
 
     }
 
     else {
 
-      document.getElementById('progressbarTop').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress>';
+      document.getElementById('progressbarTop').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress>';
 
-      document.getElementById('progressbarMiddle').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress>';
+      document.getElementById('progressbarMiddle').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress>';
 
-      document.getElementById('progressbar').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9+q10,10) + '" max="10"></progress>';
+      document.getElementById('progressbar').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="' + parseInt(q1+q2+q3+q4+q5+q6+q7+q8+q9,10) + '" max="9"></progress>';
       }
 
     }
@@ -308,7 +277,7 @@ document.write('<p><br>You can download the Self-Reflection Tool in PDF <a href=
 //  Racial Bias Questions.
 // 
 document.write('<div id="progressbarTop"></div>');
-document.getElementById('progressbarTop').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="0" max="10"></progress>';
+document.getElementById('progressbarTop').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="0" max="9"></progress>';
 
 document.write('<p><br><b>A. Racial Bias Questions</b><p>1. How do I verbally respond if someone insults my race?');
 
@@ -334,55 +303,48 @@ document.write('<p>&emsp;&emsp;b. <input type="checkbox" name="FOUR" onclick="Ch
 document.write('<p>&emsp;&emsp;c. <input type="checkbox" name="FOUR" onclick="CheckProgress();" value="C"> "The virus is the only enemy, not people."');
 document.write('<p>&emsp;&emsp;d. <input type="checkbox" name="FOUR" onclick="CheckProgress();" value="D"> "Why are you upset? Let\'s talk."');
 
-
-document.write('<p><br><br>5. How is China\'s role in spreading Coronavirus different from Japan bombing Pearl Harbor in 1941?<p>&emsp;&emsp;a. <input type="checkbox" name="FIVE" onclick="CheckProgress();" value="A"> Chinese people are victims of this disease like everyone else.');
-document.write('<p>&emsp;&emsp;b. <input type="checkbox" name="FIVE" onclick="CheckProgress();" value="B"> I blame the Chinese government for not preventing the spread globally.');
-document.write('<p>&emsp;&emsp;c. <input type="checkbox" name="FIVE" onclick="CheckProgress();" value="C"> I don\'t care about China or how China is perceived by Americans.');
-document.write('<p>&emsp;&emsp;d. <input type="checkbox" name="FIVE" onclick="CheckProgress();" value="D"> Let\'s discuss with people how they feel about the Pearl Harbor bombing which was intentional & accidental disease spreading.');
-
-
-document.write('<p><br><br>6. American religious leaders should respond to racist attacks by doing what?<p>&emsp;&emsp;a. <input type="checkbox" name="SIX" onclick="CheckProgress();" value="A"> Avoid the topic & turn the other cheek.');
-document.write('<p>&emsp;&emsp;b. <input type="checkbox" name="SIX" onclick="CheckProgress();" value="B"> Cite how Jesus spoke up without retaliation by force.');
-document.write('<p>&emsp;&emsp;c. <input type="checkbox" name="SIX" onclick="CheckProgress();" value="C"> Encourage retaliation by acquiring weapons for self-defense.');
-document.write('<p>&emsp;&emsp;d. <input type="checkbox" name="SIX" onclick="CheckProgress();" value="D"> Engage safely with haters in dialogue and other ways to hear how they think.');
+document.write('<p><br><br>5. American religious leaders should respond to racist attacks by doing what?<p>&emsp;&emsp;a. <input type="checkbox" name="FIVE" onclick="CheckProgress();" value="A"> Avoid the topic & turn the other cheek.');
+document.write('<p>&emsp;&emsp;b. <input type="checkbox" name="FIVE" onclick="CheckProgress();" value="B"> Cite how Jesus spoke up without retaliation by force.');
+document.write('<p>&emsp;&emsp;c. <input type="checkbox" name="FIVE" onclick="CheckProgress();" value="C"> Encourage retaliation by acquiring weapons for self-defense.');
+document.write('<p>&emsp;&emsp;d. <input type="checkbox" name="FIVE" onclick="CheckProgress();" value="D"> Engage safely with haters in dialogue and other ways to hear how they think.');
 
 
 //  Identity Questions.
 // 
 document.write('<div id="progressbarMiddle"></div>');
-document.getElementById('progressbarMiddle').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="0" max="10"></progress>';
+document.getElementById('progressbarMiddle').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="0" max="9"></progress>';
 
-document.write('<p><br><br><b>B. Identity Questions</b><p>1. I perceive myself as:<p>&emsp;&emsp;a. <input type="checkbox" name="SEVEN" onclick="CheckProgress();" value="A"> Passive. Non-confrontational.');
-document.write('<p>&emsp;&emsp;b. <input type="checkbox" name="SEVEN" onclick="CheckProgress();" value="B"> Neutral. Don\'t want violence.');
-document.write('<p>&emsp;&emsp;c. <input type="checkbox" name="SEVEN" onclick="CheckProgress();" value="C"> Ask for assistance when harassed.');
-document.write('<p>&emsp;&emsp;d. <input type="checkbox" name="SEVEN" onclick="CheckProgress();" value="D"> I can defend myself.');
-
-
-document.write('<p><br><br>2.  I feel like I have a negative bias towards:<p>&emsp;&emsp;a. <input type="checkbox" name="EIGHT" onclick="CheckProgress();" value="A"> Caucasians');
-document.write('<p>&emsp;&emsp;b. <input type="checkbox" name="EIGHT" onclick="CheckProgress();" value="B"> Blacks');
-document.write('<p>&emsp;&emsp;c. <input type="checkbox" name="EIGHT" onclick="CheckProgress();" value="C"> Hispanics');
-document.write('<p>&emsp;&emsp;d. <input type="checkbox" name="EIGHT" onclick="CheckProgress();" value="D"> Other Asians');
-document.write('<p>&emsp;&emsp;e. <input type="checkbox" name="EIGHT" onclick="CheckProgress();" value="E"> Other ethnicities');
-
-document.write('<p><br><br>3.  I think within Asian communities, the Asians harassed the most are:<p>&emsp;&emsp;a. <input type="checkbox" name="NINE" onclick="CheckProgress();" value="A"> Chinese');
-document.write('<p>&emsp;&emsp;b. <input type="checkbox" name="NINE" onclick="CheckProgress();" value="B"> Japanese');
-document.write('<p>&emsp;&emsp;c. <input type="checkbox" name="NINE" onclick="CheckProgress();" value="C"> Korean');
-document.write('<p>&emsp;&emsp;d. <input type="checkbox" name="NINE" onclick="CheckProgress();" value="D"> East Indians');
-document.write('<p>&emsp;&emsp;e. <input type="checkbox" name="NINE" onclick="CheckProgress();" value="E"> Filipinos');
-document.write('<p>&emsp;&emsp;f. <input type="checkbox" name="NINE" onclick="CheckProgress();" value="F"> Pacific Islanders');
-document.write('<p>&emsp;&emsp;g. <input type="checkbox" name="NINE" onclick="CheckProgress();" value="G"> Others');
+document.write('<p><br><br><b>B. Identity Questions</b><p>1. I perceive myself as:<p>&emsp;&emsp;a. <input type="checkbox" name="SIX" onclick="CheckProgress();" value="A"> Passive. Non-confrontational.');
+document.write('<p>&emsp;&emsp;b. <input type="checkbox" name="SIX" onclick="CheckProgress();" value="B"> Neutral. Don\'t want violence.');
+document.write('<p>&emsp;&emsp;c. <input type="checkbox" name="SIX" onclick="CheckProgress();" value="C"> Ask for assistance when harassed.');
+document.write('<p>&emsp;&emsp;d. <input type="checkbox" name="SIX" onclick="CheckProgress();" value="D"> I can defend myself.');
 
 
+document.write('<p><br><br>2.  I feel like I have a negative bias towards:<p>&emsp;&emsp;a. <input type="checkbox" name="SEVEN" onclick="CheckProgress();" value="A"> Caucasians');
+document.write('<p>&emsp;&emsp;b. <input type="checkbox" name="SEVEN" onclick="CheckProgress();" value="B"> Blacks');
+document.write('<p>&emsp;&emsp;c. <input type="checkbox" name="SEVEN" onclick="CheckProgress();" value="C"> Hispanics');
+document.write('<p>&emsp;&emsp;d. <input type="checkbox" name="SEVEN" onclick="CheckProgress();" value="D"> Other Asians');
+document.write('<p>&emsp;&emsp;e. <input type="checkbox" name="SEVEN" onclick="CheckProgress();" value="E"> Other ethnicities');
 
-document.write('<p><br>4.  If I could change my race, I want to be:<p>&emsp;&emsp;a. <input type="checkbox" name="TEN" onclick="CheckProgress();" value="A"> No change (my race)');
-document.write('<p>&emsp;&emsp;b. <input type="checkbox" name="TEN" onclick="CheckProgress();" value="B"> White');
-document.write('<p>&emsp;&emsp;c. <input type="checkbox" name="TEN" onclick="CheckProgress();" value="C"> Black');
-document.write('<p>&emsp;&emsp;d. <input type="checkbox" name="TEN" onclick="CheckProgress();" value="D"> Hispanic');
-document.write('<p>&emsp;&emsp;e. <input type="checkbox" name="TEN" onclick="CheckProgress();" value="E"> Others');
+document.write('<p><br><br>3.  I think within Asian communities, the Asians harassed the most are:<p>&emsp;&emsp;a. <input type="checkbox" name="EIGHT" onclick="CheckProgress();" value="A"> Chinese');
+document.write('<p>&emsp;&emsp;b. <input type="checkbox" name="EIGHT" onclick="CheckProgress();" value="B"> Japanese');
+document.write('<p>&emsp;&emsp;c. <input type="checkbox" name="EIGHT" onclick="CheckProgress();" value="C"> Korean');
+document.write('<p>&emsp;&emsp;d. <input type="checkbox" name="EIGHT" onclick="CheckProgress();" value="D"> East Indians');
+document.write('<p>&emsp;&emsp;e. <input type="checkbox" name="EIGHT" onclick="CheckProgress();" value="E"> Filipinos');
+document.write('<p>&emsp;&emsp;f. <input type="checkbox" name="EIGHT" onclick="CheckProgress();" value="F"> Pacific Islanders');
+document.write('<p>&emsp;&emsp;g. <input type="checkbox" name="EIGHT" onclick="CheckProgress();" value="G"> Others');
+
+
+
+document.write('<p><br>4.  If I could change my race, I want to be:<p>&emsp;&emsp;a. <input type="checkbox" name="NINE" onclick="CheckProgress();" value="A"> No change (my race)');
+document.write('<p>&emsp;&emsp;b. <input type="checkbox" name="NINE" onclick="CheckProgress();" value="B"> White');
+document.write('<p>&emsp;&emsp;c. <input type="checkbox" name="NINE" onclick="CheckProgress();" value="C"> Black');
+document.write('<p>&emsp;&emsp;d. <input type="checkbox" name="NINE" onclick="CheckProgress();" value="D"> Hispanic');
+document.write('<p>&emsp;&emsp;e. <input type="checkbox" name="NINE" onclick="CheckProgress();" value="E"> Others');
 
 
 document.write('<div id="progressbar"></div>');
-document.getElementById('progressbar').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="0" max="10"></progress>';
+document.getElementById('progressbar').innerHTML = '<p><br>Self-Reflection Tool Progress: <progress id="file" value="0" max="9"></progress>';
 
 document.write('<p><br><input type="submit" value="Evaluate" name="send">');
 document.write('<div id="invite"></div>');
